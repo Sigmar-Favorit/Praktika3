@@ -1,0 +1,34 @@
+﻿<Window x:Class="Praktika3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новые технологии - Система управления"
+        Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Bahnschrift Light SemiCondensed"
+        Icon="Images/app_icon.ico">
+    <Window.Resources>
+        <SolidColorBrush x:Key="AccentBrush" Color="#0C4882"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="#BBDCFA">
+            <StackPanel Margin="10">
+                <Border Height="80" Margin="5,15" Background="White" CornerRadius="10">
+                    <Image Source="Images/logo.png" Width="120" Height="60" Stretch="Uniform" Margin="0"/>
+                </Border>
+                <Button x:Name="BtnPartners" Content="Партнеры" Margin="5,5" Click="BtnPartners_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnRequests" Content="Заявки" Margin="5,5" Click="BtnRequests_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnProducts" Content="Продукция" Margin="5,5" Click="BtnProducts_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnMaterials" Content="Материалы" Margin="5,5" Click="BtnMaterials_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnEmployees" Content="Сотрудники" Margin="5,5" Click="BtnEmployees_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnWarehouse" Content="Склад" Margin="5,5" Click="BtnWarehouse_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnEquipment" Content="Доступ к оборудованию" Margin="5,5" Click="BtnEquipment_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+                <Button x:Name="BtnMovements" Content="Перемещения" Margin="5,5" Click="BtnMovements_Click" Background="#0C4882" Foreground="White" BorderThickness="0" Padding="15,10"/>
+            </StackPanel>
+        </Border>
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

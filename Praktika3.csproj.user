@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddEmployeeDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddEquipmentAccessDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddMaterialDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddPartnerDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddProductDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangeRatingDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreateRequestDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EmployeesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EquipmentAccessView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MaterialsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MovementsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PartnersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="QuantityDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RequestsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WarehouseView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="EmployeesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MaterialsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PartnersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RequestsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WarehouseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

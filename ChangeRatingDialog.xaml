@@ -1,0 +1,22 @@
+﻿<Window x:Class="Praktika3.ChangeRatingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Изменение рейтинга"
+        Width="350" Height="254" WindowStartupLocation="CenterOwner"
+        FontFamily="Bahnschrift Light SemiCondensed">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbCurrentRating" Grid.Row="0" FontSize="14" Margin="0,0,0,15"/>
+        <TextBlock Grid.Row="1" Text="Новый рейтинг (1-10):" FontWeight="Bold" Margin="0,5"/>
+        <TextBox x:Name="tbNewRating" Grid.Row="2" Margin="0,0,0,20" Height="30"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="BtnOk" Content="Сохранить" Width="80" Height="30" Margin="5" Background="#0C4882" Foreground="White"/>
+            <Button x:Name="BtnCancel" Content="Отмена" Width="80" Height="30" Margin="5" Background="#666666" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

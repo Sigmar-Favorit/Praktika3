@@ -1,0 +1,30 @@
+﻿<Page x:Class="Praktika3.ProductsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Продукция" 
+      Background="White"
+      FontFamily="Bahnschrift Light SemiCondensed">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Продукция" FontSize="22" FontWeight="Bold" Foreground="#0C4882" Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button x:Name="BtnAdd" Content="Добавить продукцию" Width="140" Height="35" Margin="10,0" Background="#0C4882" Foreground="White" BorderThickness="0" Click="BtnAdd_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="ProductsGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" AlternatingRowBackground="#BBDCFA">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Артикул" Binding="{Binding Article}" Width="100"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="120"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Name}" Width="250"/>
+                <DataGridTextColumn Header="Мин.цена" Binding="{Binding MinPrice, StringFormat=N0}" Width="100"/>
+                <DataGridTextColumn Header="Время изготовления" Binding="{Binding ProductionTimeHours, StringFormat={}{0} ч}" Width="120"/>
+                <DataGridTextColumn Header="Цех" Binding="{Binding WorkshopNumber}" Width="60"/>
+                <DataGridTextColumn Header="Себестоимость" Binding="{Binding CostPrice, StringFormat=N0}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

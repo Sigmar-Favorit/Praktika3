@@ -1,0 +1,40 @@
+﻿<Page x:Class="Praktika3.PartnersView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:Praktika3"
+      Title="Партнеры" 
+      Background="White"
+      FontFamily="Bahnschrift Light SemiCondensed">
+    <Page.Resources>
+        <local:DiscountConverter x:Key="DiscountConverter"/>
+        <local:TotalSalesToDiscountConverter x:Key="SalesDiscountConverter"/>
+    </Page.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Партнеры" FontSize="22" FontWeight="Bold" Foreground="#0C4882" Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button x:Name="BtnAdd" Content="Добавить" Width="100" Height="35" Margin="10,0" Background="#0C4882" Foreground="White" BorderThickness="0" Click="BtnAdd_Click"/>
+            <Button x:Name="BtnChangeRating" Content="Изменить рейтинг" Width="120" Height="35" Margin="10,0" Background="#0C4882" Foreground="White" BorderThickness="0" Click="BtnChangeRating_Click"/>
+            <TextBox x:Name="SearchBox" Width="200" Height="35" VerticalContentAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+        </StackPanel>
+        <DataGrid x:Name="PartnersGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" AlternatingRowBackground="#BBDCFA">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="80"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Name}" Width="200"/>
+                <DataGridTextColumn Header="Директор" Binding="{Binding DirectorName}" Width="180"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding LeqalAddress }" Width="180"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="120"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="150"/>
+                <DataGridTextColumn Header="ИНН" Binding="{Binding INN}" Width="120"/>
+                <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}" Width="80"/>
+                <DataGridTextColumn Header="Скидка по рейтингу" Binding="{Binding Rating, Converter={StaticResource DiscountConverter}}" Width="120"/>
+                <DataGridTextColumn Header="Скидка по продажам" Binding="{Binding TotalSales, Converter={StaticResource SalesDiscountConverter}}" Width="130"/>
+                <DataGridTextColumn Header="Объем продаж" Binding="{Binding TotalSales, StringFormat=N0}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
